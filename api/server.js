@@ -12,7 +12,7 @@ const router = express.Router();
 
 //Creating MongoDB database
 const dbRoute = 
-    'mongodb://jelo:password1@249583.mlab.com:49583/fullstack_app';
+    'mongodb+srv://njminer:Assaultman0351%40@cluster0-1uvfp.mongodb.net/test?retryWrites=true&w=majority';
 
 //connects back end to database
 mongoose.connect(dbRoute, { useNewUrlParser: true });
@@ -75,7 +75,7 @@ router.post('/putData', (req, res) => {
 });
 
 //appending api for http requests
-app.use('/api, router');
+app.use('/api', router);
 
 //launches backend into port
 app.listen(API_PORT, () => console.log(
